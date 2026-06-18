@@ -29,7 +29,7 @@ export default function Reelfolio() {
       setTimeout(() => {
         setCurrent((prev) => (prev + 1) % projects.length)
         setVisible(true)
-      }, 400)
+      }, 380)
     }, 6000)
     return () => clearInterval(interval)
   }, [])
@@ -50,8 +50,7 @@ export default function Reelfolio() {
         </p>
 
         <div
-          className="transition-opacity duration-300"
-          style={{ opacity: visible ? 1 : 0 }}
+          style={{ opacity: visible ? 1 : 0, transition: 'opacity 0.35s ease-in-out' }}
         >
           <div className="flex flex-col md:flex-row gap-8 md:gap-12 items-start md:items-end">
             {/* Desktop screenshot */}
@@ -74,16 +73,18 @@ export default function Reelfolio() {
 
             {/* Mobile screenshot + description */}
             <div className="flex flex-col gap-6 md:gap-8 items-start">
-              <div className="w-40 md:w-52 flex-shrink-0 rounded-[2rem] border-4 border-gray-800 shadow-lg bg-white overflow-hidden">
-                <div className="bg-gray-800 h-6 flex items-center justify-center">
-                  <span className="w-12 h-1.5 bg-gray-600 rounded-full" />
+              <div className="w-44 md:w-56 flex-shrink-0 rounded-[2.5rem] border-4 border-gray-800 shadow-xl bg-white overflow-hidden">
+                <div className="bg-gray-800 h-7 flex items-center justify-center rounded-t-[1.8rem]">
+                  <span className="w-14 h-1.5 bg-gray-600 rounded-full" />
                 </div>
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img
-                  src={project.mobile}
-                  alt={`${project.title} — mobile`}
-                  style={{ width: '100%', height: 'auto', display: 'block' }}
-                />
+                <div style={{ aspectRatio: '9/16', overflow: 'hidden' }}>
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img
+                    src={project.mobile}
+                    alt={`${project.title} — mobile`}
+                    style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'top', display: 'block' }}
+                  />
+                </div>
               </div>
               <div className="max-w-xs">
                 <p className="text-xs font-bold uppercase tracking-widest text-cyan mb-2">
