@@ -1,0 +1,16 @@
+RewriteEngine On
+
+# www → non-www (301)
+RewriteCond %{HTTP_HOST} ^www\.zarix\.site [NC]
+RewriteRule ^(.*)$ https://zarix.site/$1 [R=301,L]
+
+# Force HTTPS
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}/%{REQUEST_URI} [R=301,L]
+
+# Clean URLs: serve /blog → blog.html, etc.
+Options -MultiViews
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}.html -f
+RewriteRule ^(.+?)/?$ $1.html [L]
