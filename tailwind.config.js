@@ -11,6 +11,7 @@ module.exports = {
       },
       fontFamily: {
         sans: ['var(--font-manrope)', 'system-ui', 'sans-serif'],
+        heading: ['var(--font-barlow)', 'system-ui', 'sans-serif'],
       },
     },
   },

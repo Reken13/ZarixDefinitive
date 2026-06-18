@@ -50,7 +50,7 @@ export default function Page() {
       breadcrumbLabel="Cibersegurança para PMEs"
       h1="Cibersegurança para Pequenas e Médias Empresas"
       subtitle="Segurança"
-      intro="As PMEs são o alvo preferido dos ataques informáticos precisamente porque estão menos protegidas. A Zarix oferece protecção real, simples e acessível para o seu negócio — sem jargão técnico."
+      intro="As PMEs são o alvo preferido dos ataques informáticos precisamente porque estão menos protegidas. A Zarix oferece protecção real, simples e acessível para o seu negócio, sem jargão técnico."
       features={[
         'Avaliação de riscos e auditoria de segurança',
         'Instalação e gestão de antivírus empresarial',

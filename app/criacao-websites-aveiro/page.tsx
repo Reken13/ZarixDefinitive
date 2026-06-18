@@ -51,7 +51,7 @@ export default function Page() {
       breadcrumbLabel="Criação de Websites em Aveiro"
       h1="Criação de Websites Profissionais em Aveiro"
       subtitle="Websites"
-      intro="Um website profissional é a primeira impressão que os seus clientes têm do seu negócio. Criamos websites rápidos, modernos e optimizados para Google — para que os seus clientes o encontrem quando procuram o que oferece."
+      intro="Um website profissional é a primeira impressão que os seus clientes têm do seu negócio. Criamos websites rápidos, modernos e optimizados para Google, para que os seus clientes o encontrem quando procuram o que oferece."
       features={[
         'Design personalizado, adaptado à identidade do seu negócio',
         'Mobile-first: optimizado para telemóvel, tablet e desktop',
@@ -66,7 +66,7 @@ export default function Page() {
         { q: 'Quanto custa criar um website com a Zarix?', a: 'O preço depende do tipo de projeto. Entre em contacto para receber um orçamento gratuito adaptado ao seu negócio.' },
         { q: 'Quanto tempo demora a criar um website?', a: 'Em média, entre 2 a 4 semanas. Projetos mais simples podem ficar prontos em menos tempo.' },
         { q: 'O website fica optimizado para o Google?', a: 'Sim. Todos os websites da Zarix são criados com SEO técnico incluído: velocidade, meta tags, schema markup e estrutura correcta.' },
-        { q: 'O website funciona bem no telemóvel?', a: 'Sim, todos os projetos são mobile-first — desenhados primeiro para telemóvel e adaptados para desktop.' },
+        { q: 'O website funciona bem no telemóvel?', a: 'Sim, todos os projetos são mobile-first: desenhados primeiro para telemóvel e adaptados para desktop.' },
         { q: 'Posso actualizar o conteúdo do website depois?', a: 'Sim. Incluímos formação básica e suporte para que possa actualizar textos, imagens e menus sem depender de nós.' },
       ]}
       faqSchema={faqSchema}

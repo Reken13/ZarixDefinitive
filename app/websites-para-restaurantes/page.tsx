@@ -50,7 +50,7 @@ export default function Page() {
       breadcrumbLabel="Website para Restaurante"
       h1="Website Profissional para o Teu Restaurante"
       subtitle="Restaurantes"
-      intro="O seu restaurante merece um website que converta visitantes em clientes. Menu online, reservas, localização e fotos — tudo o que um cliente precisa para escolher o seu restaurante e aparecer à sua porta."
+      intro="O seu restaurante merece um website que converta visitantes em clientes. Menu online, reservas, localização e fotos: tudo o que um cliente precisa para escolher o seu restaurante e aparecer à sua porta."
       features={[
         'Menu online actualizado e fácil de gerir',
         'Reservas por WhatsApp ou formulário integrado',

@@ -50,7 +50,7 @@ export default function Page() {
       breadcrumbLabel="Chatbots e IA para WhatsApp"
       h1="Chatbots e Automação com IA para o Teu Negócio"
       subtitle="Automação"
-      intro="Quantos clientes perde por não responder fora de horas? Um chatbot com IA no WhatsApp responde automaticamente, aceita reservas e envia o menu — 24 horas por dia, sem que precise de estar presente."
+      intro="Quantos clientes perde por não responder fora de horas? Um chatbot com IA no WhatsApp responde automaticamente, aceita reservas e envia o menu. 24 horas por dia, sem que precise de estar presente."
       features={[
         'Chatbot WhatsApp com respostas automáticas 24h',
         'Reservas automáticas sem intervenção manual',
@@ -66,7 +66,7 @@ export default function Page() {
         { q: 'O chatbot funciona fora do horário de atendimento?', a: 'Sim. É exatamente para isso que serve. Quando está fechado, o chatbot responde, recolhe pedidos e garante que não perde clientes.' },
         { q: 'Em quanto tempo fica o chatbot pronto?', a: 'Tipicamente entre 1 a 2 semanas, incluindo configuração, testes e ajustes finais.' },
         { q: 'O chatbot consegue mostrar o menu?', a: 'Sim. O chatbot pode enviar o menu em PDF, imagens ou lista de pratos directamente na conversa do WhatsApp.' },
-        { q: 'Posso actualizar as respostas do chatbot?', a: 'Sim. Actualizamos as respostas sempre que necessário — por exemplo, quando muda o menu ou os horários.' },
+        { q: 'Posso actualizar as respostas do chatbot?', a: 'Sim. Actualizamos as respostas sempre que necessário, por exemplo quando muda o menu ou os horários.' },
       ]}
       faqSchema={faqSchema}
       breadcrumbSchema={breadcrumbSchema}

@@ -88,7 +88,7 @@ export default function BlogPost() {
             </p>
 
             <p>
-              A resposta curta é: sim. Mas não é porque o Instagram seja mau. É porque fazem coisas diferentes — e o seu negócio precisa das duas.
+              A resposta curta é: sim. Mas não é porque o Instagram seja mau. É porque fazem coisas diferentes, e o seu negócio precisa das duas.
             </p>
 
             <h2 className="text-2xl font-black text-navy mt-10 mb-4">O que o Instagram faz bem</h2>
@@ -110,7 +110,7 @@ export default function BlogPost() {
             <h2 className="text-2xl font-black text-navy mt-10 mb-4">O que o Instagram não consegue fazer</h2>
 
             <p>
-              O Instagram não aparece no Google. Quando alguém escreve <strong>&ldquo;restaurante em Aveiro&rdquo;</strong> ou <strong>&ldquo;onde comer peixe em Aveiro&rdquo;</strong>, os resultados que aparecem são websites — não perfis do Instagram.
+              O Instagram não aparece no Google. Quando alguém escreve <strong>&ldquo;restaurante em Aveiro&rdquo;</strong> ou <strong>&ldquo;onde comer peixe em Aveiro&rdquo;</strong>, os resultados que aparecem são websites, não perfis do Instagram.
             </p>
 
             <p>
@@ -161,7 +161,7 @@ export default function BlogPost() {
             </p>
 
             <p>
-              A maioria dos restaurantes que crescem online usa as duas ferramentas. Não é uma escolha — é uma estratégia.
+              A maioria dos restaurantes que crescem online usa as duas ferramentas. Não é uma escolha: é uma estratégia.
             </p>
 
             <p>

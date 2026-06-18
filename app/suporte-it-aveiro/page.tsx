@@ -65,7 +65,7 @@ export default function Page() {
         { q: 'Qual é o tempo de resposta para uma situação urgente?', a: 'Para situações urgentes, procuramos estar no local no próprio dia. Em casos normais, garantimos resposta em 24 horas úteis.' },
         { q: 'A Zarix faz suporte remoto?', a: 'Sim. Muitos problemas podem ser resolvidos remotamente em minutos, sem necessidade de deslocação.' },
         { q: 'Qual é o custo do suporte IT?', a: 'Temos planos mensais de suporte e serviço pontual. O diagnóstico inicial é sempre gratuito.' },
-        { q: 'A Zarix trabalha com que tipo de equipamentos?', a: 'Trabalhamos com PCs, portáteis, impressoras, routers, switches e sistemas de gestão — Windows, macOS e Linux.' },
+        { q: 'A Zarix trabalha com que tipo de equipamentos?', a: 'Trabalhamos com PCs, portáteis, impressoras, routers, switches e sistemas de gestão: Windows, macOS e Linux.' },
         { q: 'Fazem manutenção preventiva?', a: 'Sim. Recomendamos manutenção preventiva regular para evitar paragens inesperadas e prolongar a vida dos equipamentos.' },
       ]}
       faqSchema={faqSchema}

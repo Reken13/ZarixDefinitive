@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { Manrope } from 'next/font/google'
+import { Manrope, Barlow } from 'next/font/google'
 import Script from 'next/script'
 import './globals.css'
 import WhatsAppFAB from './components/WhatsAppFAB'
@@ -8,6 +8,13 @@ import PrivacyModal from './components/PrivacyModal'
 const manrope = Manrope({
   subsets: ['latin'],
   variable: '--font-manrope',
+  display: 'swap',
+})
+
+const barlow = Barlow({
+  subsets: ['latin'],
+  weight: ['900'],
+  variable: '--font-barlow',
   display: 'swap',
 })
 
@@ -75,7 +82,7 @@ const localBusinessSchema = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="pt-PT" className={manrope.variable}>
+    <html lang="pt-PT" className={`${manrope.variable} ${barlow.variable}`}>
       <head>
         <script
           type="application/ld+json"

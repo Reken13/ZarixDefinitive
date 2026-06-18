@@ -65,7 +65,7 @@ export default function Page() {
         { q: 'O meu computador está muito lento. Vale a pena reparar?', a: 'Na maioria dos casos, sim. Um computador lento pode ficar como novo com uma limpeza, optimização do sistema ou upgrade de memória/disco. O diagnóstico é gratuito.' },
         { q: 'Fazem reparação de portáteis?', a: 'Sim. Reparamos portáteis de todas as marcas: ecrã, teclado, bateria, placa-mãe e problemas de software.' },
         { q: 'Consigo recuperar ficheiros de um computador avariado?', a: 'Muitas vezes sim. Temos equipamento para recuperação de dados de discos danificados ou formatados. O diagnóstico inicial é gratuito.' },
-        { q: 'Quanto tempo demora a reparação?', a: 'A maioria das reparações fica pronta no mesmo dia ou em 24 horas. Para peças especiais, pode demorar mais — avisamos sempre antes.' },
+        { q: 'Quanto tempo demora a reparação?', a: 'A maioria das reparações fica pronta no mesmo dia ou em 24 horas. Para peças especiais, pode demorar mais. Avisamos sempre antes.' },
         { q: 'Fazem upgrades de hardware?', a: 'Sim. Instalamos mais memória RAM, SSD, placas gráficas e outros componentes para dar nova vida ao seu equipamento.' },
       ]}
       faqSchema={faqSchema}

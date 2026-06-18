@@ -44,21 +44,17 @@ export default function Hero() {
         </p>
 
         <div className="mb-8">
-          <p className="text-[clamp(3rem,10vw,7rem)] font-black text-gray-950 leading-[0.9] tracking-tight">
+          <p className="text-[clamp(3rem,10vw,7rem)] font-black text-gray-950 leading-[0.9] font-heading">
             O SEU NEGÓCIO
           </p>
-          <p className="text-[clamp(3rem,10vw,7rem)] font-black text-gray-950 leading-[0.9] tracking-tight">
-            NÃO PODE PARAR.
+          <p className="text-[clamp(3rem,10vw,7rem)] font-black text-gray-950 leading-[0.9] font-heading">
+            NÃO PODE <span className="text-cyan">PARAR.</span>
           </p>
         </div>
 
-        <h1 className="text-lg md:text-xl font-semibold text-navy mb-4 max-w-lg">
+        <h1 className="text-lg md:text-xl font-semibold text-navy mb-12 max-w-lg">
           Zarix — Suporte IT e Websites para PMEs em Aveiro
         </h1>
-
-        <p className="text-gray-500 text-base md:text-lg mb-12 max-w-md leading-relaxed">
-          Para restaurantes, barbearias, clínicas e PMEs — sem jargão, sem complicações.
-        </p>
 
         <div className="flex flex-col sm:flex-row gap-4">
           <a

@@ -72,7 +72,7 @@ export default function BlogPage() {
             Dicas de IT e Tecnologia para a tua PME
           </h1>
           <p className="text-gray-500 text-base md:text-lg max-w-xl leading-relaxed">
-            Artigos práticos sobre websites, suporte IT, cibersegurança e automação — escritos para donos de negócio, não para técnicos.
+            Artigos práticos sobre websites, suporte IT, cibersegurança e automação. Escritos para donos de negócio, não para técnicos.
           </p>
         </section>
 

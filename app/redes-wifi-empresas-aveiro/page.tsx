@@ -50,7 +50,7 @@ export default function Page() {
       breadcrumbLabel="Redes Wi-Fi para Empresas"
       h1="Instalação de Redes Wi-Fi para Empresas em Aveiro"
       subtitle="Redes"
-      intro="Uma rede Wi-Fi lenta ou insegura custa dinheiro ao seu negócio. A Zarix instala redes profissionais, estáveis e seguras — com cobertura total, rede separada para clientes e gestão remota incluída."
+      intro="Uma rede Wi-Fi lenta ou insegura custa dinheiro ao seu negócio. A Zarix instala redes profissionais, estáveis e seguras: cobertura total, rede separada para clientes e gestão remota incluída."
       features={[
         'Análise e planeamento da rede para o seu espaço',
         'Instalação de routers e access points profissionais',
