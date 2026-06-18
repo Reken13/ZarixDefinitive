@@ -1,20 +1,19 @@
 'use client'
 
 import { useState, useEffect } from 'react'
-import Image from 'next/image'
 
 const projects = [
   {
-    title: 'Projecto 1',
-    category: 'Website',
-    description: 'Website desenvolvido pela Zarix — rápido, moderno e optimizado para Google.',
+    title: 'Casa Lista',
+    category: 'Negócio Local',
+    description: 'Presença online para um negócio local — website rápido, moderno e optimizado para aparecer no Google.',
     desktop: '/portfolio-1.1.png',
     mobile: '/portfolio-1.2.png',
   },
   {
-    title: 'Projecto 2',
-    category: 'Website',
-    description: 'Website desenvolvido pela Zarix — rápido, moderno e optimizado para Google.',
+    title: 'LaRiaPet',
+    category: 'Clínica Veterinária',
+    description: 'Website profissional para clínica veterinária com apresentação de serviços e marcação de consultas online.',
     desktop: '/portfolio-2.1.png',
     mobile: '/portfolio-2.2.png',
   },
@@ -56,7 +55,7 @@ export default function Reelfolio() {
         >
           <div className="flex flex-col md:flex-row gap-8 md:gap-12 items-start md:items-end">
             {/* Desktop screenshot */}
-            <div className="flex-1 min-w-0 rounded-t-lg overflow-hidden border border-gray-200 shadow-sm bg-white">
+            <div className="flex-1 min-w-0 rounded-t-lg border border-gray-200 shadow-sm bg-white overflow-hidden">
               <div className="bg-gray-100 px-3 py-2 flex items-center gap-1.5">
                 <span className="w-2.5 h-2.5 rounded-full bg-red-300" />
                 <span className="w-2.5 h-2.5 rounded-full bg-yellow-300" />
@@ -65,34 +64,26 @@ export default function Reelfolio() {
                   <span className="text-[8px] text-gray-400">zarix.site</span>
                 </div>
               </div>
-              <div className="w-full bg-gray-100">
-                <Image
-                  src={project.desktop}
-                  alt={`${project.title} — desktop`}
-                  width={1200}
-                  height={800}
-                  className="w-full h-auto"
-                  sizes="(max-width: 768px) 100vw, 60vw"
-                />
-              </div>
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src={project.desktop}
+                alt={`${project.title} — desktop`}
+                style={{ width: '100%', height: 'auto', display: 'block' }}
+              />
             </div>
 
             {/* Mobile screenshot + description */}
             <div className="flex flex-col gap-6 md:gap-8 items-start">
-              <div className="w-24 md:w-32 flex-shrink-0 rounded-2xl overflow-hidden border-2 border-gray-200 shadow-sm bg-white">
+              <div className="w-24 md:w-32 flex-shrink-0 rounded-2xl border-2 border-gray-200 shadow-sm bg-white overflow-hidden">
                 <div className="bg-gray-950 h-4 flex items-center justify-center">
                   <span className="w-8 h-1 bg-gray-700 rounded-full" />
                 </div>
-                <div className="w-full bg-gray-100">
-                  <Image
-                    src={project.mobile}
-                    alt={`${project.title} — mobile`}
-                    width={390}
-                    height={844}
-                    className="w-full h-auto"
-                    sizes="128px"
-                  />
-                </div>
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src={project.mobile}
+                  alt={`${project.title} — mobile`}
+                  style={{ width: '100%', height: 'auto', display: 'block' }}
+                />
               </div>
               <div className="max-w-xs">
                 <p className="text-xs font-bold uppercase tracking-widest text-cyan mb-2">

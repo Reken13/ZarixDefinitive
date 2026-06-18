@@ -4,7 +4,7 @@ const team = [
   {
     src: '/foto-ricardo.jpg',
     alt: 'Ricardo, fundador da Zarix',
-    name: 'Ricardo',
+    name: 'Ricardo Betancourt',
     role: 'Fundador · Suporte IT',
     bio: 'O técnico IT de confiança de dezenas de negócios em Aveiro. Aparece quando precisa, resolve o problema e explica tudo de forma clara.',
     objectPosition: 'object-top',

@@ -50,7 +50,14 @@ export default function Reviews() {
             <div className="text-center">
               <p className="text-5xl font-black text-navy leading-none">5.0</p>
               <Stars />
-              <p className="text-gray-500 text-xs mt-1">4 avaliações</p>
+              <a
+                href="https://maps.app.goo.gl/nTW6ooXETwocbRws8"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-500 text-xs mt-1 hover:text-cyan transition-colors underline underline-offset-2"
+              >
+                +10 avaliações
+              </a>
             </div>
             <div className="w-px h-12 bg-gray-200" />
             <div className="flex flex-col items-center">
