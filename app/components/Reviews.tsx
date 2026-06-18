@@ -1,33 +1,23 @@
 const reviews = [
   {
-    name: 'Maria Santos',
-    business: 'Restaurante O Bacalhau',
-    text: 'O Ricardo resolveu o problema do nosso Wi-Fi em menos de duas horas. Profissional, rápido e explicou tudo de forma clara. Recomendo sem hesitar.',
+    name: 'José Arthur Emanuel Alves da Silva',
+    text: 'Bom suporte ao conserto de PC',
+    date: 'Há 3 semanas',
+  },
+  {
+    name: 'Fábio Teixeira',
+    text: 'Ótimo suporte',
     date: 'Há 2 semanas',
   },
   {
-    name: 'João Ferreira',
-    business: 'Barbearia Moderna',
-    text: 'Criou o nosso website e ficou exatamente como queríamos. Simples, bonito e os clientes já começaram a marcar online. Excelente trabalho.',
-    date: 'Há 1 mês',
+    name: 'Leandro Oliveira',
+    text: 'Ótimo serviço!',
+    date: 'Há 2 semanas',
   },
   {
-    name: 'Ana Oliveira',
-    business: 'Clínica Dental Silva',
-    text: 'Suporte IT de confiança. Quando o nosso sistema de gestão bloqueou a meio da tarde, o Ricardo estava cá em 30 minutos. Salvou-nos o dia.',
-    date: 'Há 2 meses',
-  },
-  {
-    name: 'Carlos Mendes',
-    business: 'Padaria Central',
-    text: 'Ajudou-nos a instalar uma rede Wi-Fi nova e a proteger o nosso equipamento. Preço justo e serviço de qualidade. Já o recomendámos a outros lojistas.',
-    date: 'Há 3 meses',
-  },
-  {
-    name: 'Sofia Costa',
-    business: 'Estética e Bem-estar',
-    text: 'Fantástico. O nosso computador estava muito lento e em duas horas já estava como novo. Atendimento humano e preço transparente.',
-    date: 'Há 3 meses',
+    name: 'Valeria Mendoza',
+    text: 'Tive uma excelente experiência com a Zarix.',
+    date: 'Há 2 semanas',
   },
 ]
 
@@ -60,7 +50,7 @@ export default function Reviews() {
             <div className="text-center">
               <p className="text-5xl font-black text-navy leading-none">5.0</p>
               <Stars />
-              <p className="text-gray-500 text-xs mt-1">9 avaliações</p>
+              <p className="text-gray-500 text-xs mt-1">4 avaliações</p>
             </div>
             <div className="w-px h-12 bg-gray-200" />
             <div className="flex flex-col items-center">
@@ -75,8 +65,8 @@ export default function Reviews() {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {reviews.slice(0, 3).map((review) => (
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          {reviews.map((review) => (
             <div key={review.name} className="border border-gray-100 p-6">
               <Stars />
               <p className="text-gray-700 text-sm leading-relaxed mt-4 mb-6">
@@ -84,22 +74,7 @@ export default function Reviews() {
               </p>
               <div className="border-t border-gray-100 pt-4">
                 <p className="font-semibold text-navy text-sm">{review.name}</p>
-                <p className="text-gray-400 text-xs">{review.business} · {review.date}</p>
-              </div>
-            </div>
-          ))}
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
-          {reviews.slice(3).map((review) => (
-            <div key={review.name} className="border border-gray-100 p-6">
-              <Stars />
-              <p className="text-gray-700 text-sm leading-relaxed mt-4 mb-6">
-                &ldquo;{review.text}&rdquo;
-              </p>
-              <div className="border-t border-gray-100 pt-4">
-                <p className="font-semibold text-navy text-sm">{review.name}</p>
-                <p className="text-gray-400 text-xs">{review.business} · {review.date}</p>
+                <p className="text-gray-400 text-xs">{review.date}</p>
               </div>
             </div>
           ))}
