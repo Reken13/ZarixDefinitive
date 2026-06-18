@@ -1,84 +1,24 @@
 'use client'
 
 import { useState, useEffect } from 'react'
+import Image from 'next/image'
 
 const projects = [
   {
-    title: 'Restaurante Ria',
-    category: 'Restaurante',
-    description: 'Website com menu online, galeria de pratos e reservas por WhatsApp. Optimizado para pesquisa local em Aveiro.',
+    title: 'Projecto 1',
+    category: 'Website',
+    description: 'Website desenvolvido pela Zarix — rápido, moderno e optimizado para Google.',
+    desktop: '/portfolio-1.1.png',
+    mobile: '/portfolio-1.2.png',
   },
   {
-    title: 'Barbearia Moderna',
-    category: 'Barbearia',
-    description: 'Presença digital com agendamento online, galeria de trabalhos e contacto direto via WhatsApp.',
-  },
-  {
-    title: 'Clínica Dental Sorriso',
-    category: 'Clínica Dentária',
-    description: 'Website profissional com apresentação de serviços, equipa e marcação de consultas online.',
-  },
-  {
-    title: 'Padaria Artesanal',
-    category: 'Comércio Local',
-    description: 'Catálogo de produtos, horários atualizados e localização integrada com Google Maps.',
-  },
-  {
-    title: 'Oficina Costa',
-    category: 'Serviços Automóvel',
-    description: 'Website com serviços, avaliações de clientes e formulário de marcação de revisões.',
-  },
-  {
-    title: 'Hotel Ria de Aveiro',
-    category: 'Hotelaria',
-    description: 'Site com galeria de quartos, disponibilidade e integração com plataformas de reserva.',
+    title: 'Projecto 2',
+    category: 'Website',
+    description: 'Website desenvolvido pela Zarix — rápido, moderno e optimizado para Google.',
+    desktop: '/portfolio-2.1.png',
+    mobile: '/portfolio-2.2.png',
   },
 ]
-
-function DesktopMockup({ title, category }: { title: string; category: string }) {
-  return (
-    <div className="w-full rounded-t-lg overflow-hidden border border-gray-200 bg-white shadow-sm">
-      <div className="bg-gray-100 px-3 py-2 flex items-center gap-1.5">
-        <span className="w-2.5 h-2.5 rounded-full bg-gray-300" />
-        <span className="w-2.5 h-2.5 rounded-full bg-gray-300" />
-        <span className="w-2.5 h-2.5 rounded-full bg-gray-300" />
-        <div className="ml-3 flex-1 bg-white rounded h-4 px-2 flex items-center">
-          <span className="text-[8px] text-gray-400 truncate">zarix.site/{title.toLowerCase().replace(/\s/g, '-')}</span>
-        </div>
-      </div>
-      <div className="h-48 md:h-64 bg-[#F0F4F8] p-4 flex flex-col">
-        <div className="w-20 h-3 bg-navy rounded mb-3" />
-        <div className="w-full h-2 bg-gray-200 rounded mb-2" />
-        <div className="w-3/4 h-2 bg-gray-200 rounded mb-6" />
-        <div className="w-24 h-8 bg-navy rounded mb-4" />
-        <div className="grid grid-cols-3 gap-2 flex-1">
-          <div className="bg-white rounded border border-gray-100" />
-          <div className="bg-white rounded border border-gray-100" />
-          <div className="bg-white rounded border border-gray-100" />
-        </div>
-        <div className="mt-3 text-[10px] text-gray-400 text-center">{category}</div>
-      </div>
-    </div>
-  )
-}
-
-function MobileMockup({ category }: { category: string }) {
-  return (
-    <div className="w-24 md:w-32 flex-shrink-0 rounded-2xl overflow-hidden border-2 border-gray-200 bg-white shadow-sm">
-      <div className="bg-gray-950 h-4 flex items-center justify-center">
-        <span className="w-8 h-1 bg-gray-700 rounded-full" />
-      </div>
-      <div className="bg-[#F0F4F8] p-2 min-h-[160px] md:min-h-[220px] flex flex-col">
-        <div className="w-full h-2 bg-navy rounded mb-2" />
-        <div className="w-full h-1.5 bg-gray-200 rounded mb-1" />
-        <div className="w-2/3 h-1.5 bg-gray-200 rounded mb-3" />
-        <div className="w-full h-16 md:h-24 bg-white rounded border border-gray-100 mb-2" />
-        <div className="w-full h-6 bg-navy rounded mb-1" />
-        <div className="text-[8px] text-gray-400 text-center mt-auto">{category}</div>
-      </div>
-    </div>
-  )
-}
 
 export default function Reelfolio() {
   const [current, setCurrent] = useState(0)
@@ -91,7 +31,7 @@ export default function Reelfolio() {
         setCurrent((prev) => (prev + 1) % projects.length)
         setVisible(true)
       }, 400)
-    }, 2000)
+    }, 4000)
     return () => clearInterval(interval)
   }, [])
 
@@ -115,11 +55,43 @@ export default function Reelfolio() {
           style={{ opacity: visible ? 1 : 0 }}
         >
           <div className="flex flex-col md:flex-row gap-8 md:gap-12 items-start md:items-end">
-            <div className="flex-1 min-w-0">
-              <DesktopMockup title={project.title} category={project.category} />
+            {/* Desktop screenshot */}
+            <div className="flex-1 min-w-0 rounded-t-lg overflow-hidden border border-gray-200 shadow-sm bg-white">
+              <div className="bg-gray-100 px-3 py-2 flex items-center gap-1.5">
+                <span className="w-2.5 h-2.5 rounded-full bg-red-300" />
+                <span className="w-2.5 h-2.5 rounded-full bg-yellow-300" />
+                <span className="w-2.5 h-2.5 rounded-full bg-green-300" />
+                <div className="ml-3 flex-1 bg-white rounded h-4 px-2 flex items-center">
+                  <span className="text-[8px] text-gray-400">zarix.site</span>
+                </div>
+              </div>
+              <div className="relative w-full aspect-[16/10] bg-gray-100">
+                <Image
+                  src={project.desktop}
+                  alt={`${project.title} — desktop`}
+                  fill
+                  className="object-cover object-top"
+                  sizes="(max-width: 768px) 100vw, 60vw"
+                />
+              </div>
             </div>
+
+            {/* Mobile screenshot + description */}
             <div className="flex flex-col gap-6 md:gap-8 items-start">
-              <MobileMockup category={project.category} />
+              <div className="w-24 md:w-32 flex-shrink-0 rounded-2xl overflow-hidden border-2 border-gray-200 shadow-sm bg-white">
+                <div className="bg-gray-950 h-4 flex items-center justify-center">
+                  <span className="w-8 h-1 bg-gray-700 rounded-full" />
+                </div>
+                <div className="relative w-full aspect-[9/16] bg-gray-100">
+                  <Image
+                    src={project.mobile}
+                    alt={`${project.title} — mobile`}
+                    fill
+                    className="object-cover object-top"
+                    sizes="128px"
+                  />
+                </div>
+              </div>
               <div className="max-w-xs">
                 <p className="text-xs font-bold uppercase tracking-widest text-cyan mb-2">
                   {project.category}
@@ -133,8 +105,9 @@ export default function Reelfolio() {
 
         <div className="mt-16 flex items-center gap-3">
           {projects.map((_, i) => (
-            <span
+            <button
               key={i}
+              onClick={() => { setVisible(false); setTimeout(() => { setCurrent(i); setVisible(true) }, 400) }}
               className={`block h-0.5 transition-all duration-300 ${
                 i === current ? 'w-8 bg-navy' : 'w-4 bg-gray-300'
               }`}
