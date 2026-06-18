@@ -3,18 +3,20 @@ import Image from 'next/image'
 const team = [
   {
     src: '/foto-ricardo.jpg',
-    alt: 'Ricardo, co-founder da Zarix',
+    alt: 'Ricardo, fundador da Zarix',
     name: 'Ricardo',
     role: 'Fundador · Suporte IT',
     bio: 'O técnico IT de confiança de dezenas de negócios em Aveiro. Aparece quando precisa, resolve o problema e explica tudo de forma clara.',
+    objectPosition: 'object-top',
     priority: true,
   },
   {
     src: '/foto-luis.jpg',
-    alt: 'Luis Arias, co-founder da Zarix',
+    alt: 'Luis Arias, co-fundador da Zarix',
     name: 'Luis Arias',
     role: 'Co-fundador · Desenvolvimento',
     bio: 'Especialista em programação e desenvolvimento web. Cria os websites e soluções digitais que fazem crescer o negócio dos nossos clientes.',
+    objectPosition: 'object-center',
     priority: false,
   },
 ]
@@ -43,7 +45,7 @@ export default function About() {
                   src={person.src}
                   alt={person.alt}
                   fill
-                  className="object-cover object-top"
+                  className={`object-cover ${person.objectPosition}`}
                   sizes="(max-width: 768px) 208px, 240px"
                   priority={person.priority}
                 />
