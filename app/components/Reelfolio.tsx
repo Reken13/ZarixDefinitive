@@ -50,7 +50,7 @@ export default function Reelfolio() {
         </p>
 
         <div
-          className="transition-opacity duration-400"
+          className="transition-opacity duration-300"
           style={{ opacity: visible ? 1 : 0 }}
         >
           <div className="flex flex-col md:flex-row gap-8 md:gap-12 items-start md:items-end">
@@ -74,9 +74,9 @@ export default function Reelfolio() {
 
             {/* Mobile screenshot + description */}
             <div className="flex flex-col gap-6 md:gap-8 items-start">
-              <div className="w-24 md:w-32 flex-shrink-0 rounded-2xl border-2 border-gray-200 shadow-sm bg-white overflow-hidden">
-                <div className="bg-gray-950 h-4 flex items-center justify-center">
-                  <span className="w-8 h-1 bg-gray-700 rounded-full" />
+              <div className="w-40 md:w-52 flex-shrink-0 rounded-[2rem] border-4 border-gray-800 shadow-lg bg-white overflow-hidden">
+                <div className="bg-gray-800 h-6 flex items-center justify-center">
+                  <span className="w-12 h-1.5 bg-gray-600 rounded-full" />
                 </div>
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
