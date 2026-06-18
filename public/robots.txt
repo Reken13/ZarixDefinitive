@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /*.json$
+Disallow: /node_modules/
+Disallow: /.git/
+Sitemap: https://zarix.site/sitemap.xml
