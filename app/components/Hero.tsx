@@ -30,8 +30,15 @@ function trackWhatsApp() {
 
 export default function Hero() {
   return (
-    <section className="min-h-screen flex flex-col justify-center pt-16">
-      <div className="max-w-6xl mx-auto px-6 md:px-12 py-24 md:py-32">
+    <section
+      className="pt-16"
+      style={{
+        backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24'%3E%3Ccircle cx='1' cy='1' r='0.8' fill='%23000000' opacity='0.035'/%3E%3C/svg%3E")`,
+        backgroundRepeat: 'repeat',
+        backgroundSize: '24px 24px',
+      }}
+    >
+      <div className="max-w-6xl mx-auto px-6 md:px-12 py-28 md:py-36">
         <p className="text-xs font-bold uppercase tracking-widest text-cyan mb-10 md:mb-14">
           O informático do seu negócio em Aveiro.
         </p>
@@ -50,7 +57,7 @@ export default function Hero() {
         </h1>
 
         <p className="text-gray-500 text-base md:text-lg mb-12 max-w-md leading-relaxed">
-          Websites, suporte IT e tecnologia para empresas em Aveiro.
+          Para restaurantes, barbearias, clínicas e PMEs — sem jargão, sem complicações.
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4">

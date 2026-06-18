@@ -11,10 +11,10 @@ export default function Nav() {
       <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
         <Link
           href="/"
-          className="text-navy font-black text-xl tracking-tight"
+          className="font-black text-xl tracking-tight"
           onClick={() => setOpen(false)}
         >
-          Zarix
+          <span className="text-navy">Zari</span><span className="text-cyan">x</span>
         </Link>
 
         <nav className="hidden md:flex items-center gap-8">
@@ -67,41 +67,19 @@ export default function Nav() {
 
       {open && (
         <div className="md:hidden bg-white border-t border-gray-100 px-6 py-6 flex flex-col gap-5">
-          <Link
-            href="/criacao-websites-aveiro"
-            className="text-gray-700 font-medium text-base"
-            onClick={() => setOpen(false)}
-          >
+          <Link href="/criacao-websites-aveiro" className="text-gray-700 font-medium text-base" onClick={() => setOpen(false)}>
             Websites
           </Link>
-          <Link
-            href="/suporte-it-restaurantes-aveiro"
-            className="text-gray-700 font-medium text-base"
-            onClick={() => setOpen(false)}
-          >
+          <Link href="/suporte-it-restaurantes-aveiro" className="text-gray-700 font-medium text-base" onClick={() => setOpen(false)}>
             Restaurantes
           </Link>
-          <Link
-            href="/blog"
-            className="text-gray-700 font-medium text-base"
-            onClick={() => setOpen(false)}
-          >
+          <Link href="/blog" className="text-gray-700 font-medium text-base" onClick={() => setOpen(false)}>
             Blog
           </Link>
-          <Link
-            href="/#contact"
-            className="text-gray-700 font-medium text-base"
-            onClick={() => setOpen(false)}
-          >
+          <Link href="/#contact" className="text-gray-700 font-medium text-base" onClick={() => setOpen(false)}>
             Contacto
           </Link>
-          <a
-            href="https://wa.me/351967608772"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="bg-navy text-white font-semibold px-6 py-3 text-center"
-            onClick={() => setOpen(false)}
-          >
+          <a href="https://wa.me/351967608772" target="_blank" rel="noopener noreferrer" className="bg-navy text-white font-semibold px-6 py-3 text-center" onClick={() => setOpen(false)}>
             Falar no WhatsApp
           </a>
         </div>

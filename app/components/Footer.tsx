@@ -13,8 +13,8 @@ export default function Footer() {
       <div className="max-w-6xl mx-auto px-6 md:px-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-10 md:gap-8 mb-12">
           <div className="md:col-span-2">
-            <Link href="/" className="text-white font-black text-2xl tracking-tight">
-              Zarix
+            <Link href="/" className="font-black text-2xl tracking-tight">
+              <span className="text-white">Zari</span><span className="text-cyan">x</span>
             </Link>
             <p className="text-gray-400 text-sm mt-3 max-w-xs leading-relaxed">
               O informático do seu negócio em Aveiro. Suporte IT, websites e tecnologia para restaurantes e PMEs.
@@ -52,10 +52,10 @@ export default function Footer() {
                 Criação de Websites
               </Link>
               <Link href="/suporte-it-aveiro" className="text-gray-400 hover:text-white text-sm transition-colors">
-                Suporte IT
+                Suporte para Empresas
               </Link>
               <Link href="/suporte-it-restaurantes-aveiro" className="text-gray-400 hover:text-white text-sm transition-colors">
-                IT para Restaurantes
+                Suporte para Restaurantes
               </Link>
               <Link href="/redes-wifi-empresas-aveiro" className="text-gray-400 hover:text-white text-sm transition-colors">
                 Redes Wi-Fi
@@ -67,7 +67,7 @@ export default function Footer() {
                 Chatbots com IA
               </Link>
               <Link href="/manutencao-informatica-aveiro" className="text-gray-400 hover:text-white text-sm transition-colors">
-                Manutenção IT
+                Manutenção
               </Link>
             </nav>
           </div>

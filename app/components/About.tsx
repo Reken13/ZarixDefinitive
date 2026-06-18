@@ -1,3 +1,5 @@
+import Image from 'next/image'
+
 export default function About() {
   return (
     <section className="bg-navy py-24 md:py-32">
@@ -32,21 +34,15 @@ export default function About() {
           </div>
 
           <div className="order-1 md:order-2 flex justify-center md:justify-end">
-            <div className="w-64 h-80 md:w-80 md:h-96 bg-[#1a2f6b] flex items-end justify-center overflow-hidden">
-              <div className="w-full h-full flex flex-col items-center justify-end pb-8">
-                <div className="w-24 h-24 md:w-32 md:h-32 rounded-full bg-[#243a7a] mb-4 flex items-center justify-center">
-                  <svg
-                    viewBox="0 0 24 24"
-                    className="w-14 h-14 md:w-20 md:h-20 text-gray-400"
-                    fill="currentColor"
-                  >
-                    <path d="M12 12c2.7 0 4.8-2.1 4.8-4.8S14.7 2.4 12 2.4 7.2 4.5 7.2 7.2 9.3 12 12 12zm0 2.4c-3.2 0-9.6 1.6-9.6 4.8v2.4h19.2v-2.4c0-3.2-6.4-4.8-9.6-4.8z" />
-                  </svg>
-                </div>
-                <p className="text-white font-bold text-lg">Ricardo</p>
-                <p className="text-gray-400 text-sm">Fundador · Zarix</p>
-                <p className="text-cyan text-xs mt-1 font-medium">Aveiro, Portugal</p>
-              </div>
+            <div className="relative w-64 h-80 md:w-80 md:h-96 overflow-hidden">
+              <Image
+                src="/foto-ricardo.jpg"
+                alt="Ricardo, fundador da Zarix"
+                fill
+                className="object-cover object-top"
+                sizes="(max-width: 768px) 256px, 320px"
+                priority
+              />
             </div>
           </div>
         </div>
