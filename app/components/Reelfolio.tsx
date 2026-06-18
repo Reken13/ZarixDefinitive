@@ -31,7 +31,7 @@ export default function Reelfolio() {
         setCurrent((prev) => (prev + 1) % projects.length)
         setVisible(true)
       }, 400)
-    }, 4000)
+    }, 6000)
     return () => clearInterval(interval)
   }, [])
 
@@ -65,12 +65,13 @@ export default function Reelfolio() {
                   <span className="text-[8px] text-gray-400">zarix.site</span>
                 </div>
               </div>
-              <div className="relative w-full aspect-[16/10] bg-gray-100">
+              <div className="w-full bg-gray-100">
                 <Image
                   src={project.desktop}
                   alt={`${project.title} — desktop`}
-                  fill
-                  className="object-cover object-top"
+                  width={1200}
+                  height={800}
+                  className="w-full h-auto"
                   sizes="(max-width: 768px) 100vw, 60vw"
                 />
               </div>
@@ -82,12 +83,13 @@ export default function Reelfolio() {
                 <div className="bg-gray-950 h-4 flex items-center justify-center">
                   <span className="w-8 h-1 bg-gray-700 rounded-full" />
                 </div>
-                <div className="relative w-full aspect-[9/16] bg-gray-100">
+                <div className="w-full bg-gray-100">
                   <Image
                     src={project.mobile}
                     alt={`${project.title} — mobile`}
-                    fill
-                    className="object-cover object-top"
+                    width={390}
+                    height={844}
+                    className="w-full h-auto"
                     sizes="128px"
                   />
                 </div>
