@@ -17,10 +17,10 @@ export const metadata: Metadata = {
     title: 'Criação de Websites em Aveiro | Zarix',
     description:
       'Websites profissionais para restaurantes e PMEs em Aveiro. Rápidos, modernos e optimizados para Google. Orçamento gratuito — Zarix IT.',
-    images: [{ url: 'https://zarix.site/og-image.png' }],
+    images: [{ url: 'https://zarix.site/og-image.jpg' }],
     locale: 'pt_PT',
   },
-  twitter: { card: 'summary_large_image', images: ['https://zarix.site/og-image.png'] },
+  twitter: { card: 'summary_large_image', images: ['https://zarix.site/og-image.jpg'] },
 }
 
 const breadcrumbSchema = {

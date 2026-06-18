@@ -22,11 +22,11 @@ export const metadata: Metadata = {
   metadataBase: new URL('https://zarix.site'),
   icons: {
     icon: [
-      { url: '/favicon.ico' },
+      { url: '/favicon.ico', type: 'image/png' },
       { url: '/favicon-32.png', sizes: '32x32', type: 'image/png' },
       { url: '/favicon-192.png', sizes: '192x192', type: 'image/png' },
     ],
-    apple: [{ url: '/apple-touch-icon.png', sizes: '180x180' }],
+    apple: [{ url: '/apple-touch-icon.png', sizes: '180x180', type: 'image/png' }],
   },
 }
 
@@ -40,7 +40,7 @@ const localBusinessSchema = {
     'Suporte IT e criação de websites para restaurantes e PMEs em Aveiro. Redes Wi-Fi, cibersegurança, chatbots com IA, manutenção informática e websites profissionais. Diagnóstico gratuito sem compromisso.',
   url: 'https://zarix.site/',
   logo: 'https://zarix.site/favicon-192.png',
-  image: 'https://zarix.site/og-image.png',
+  image: 'https://zarix.site/og-image.jpg',
   telephone: '+351967608772',
   email: 'info@zarix.site',
   address: {

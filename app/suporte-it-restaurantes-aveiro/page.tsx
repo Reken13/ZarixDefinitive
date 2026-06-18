@@ -16,10 +16,10 @@ export const metadata: Metadata = {
     type: 'website',
     title: 'Suporte IT para Restaurantes em Aveiro | Zarix',
     description: 'Suporte informático dedicado a restaurantes em Aveiro. Wi-Fi, TPAs, caixas, sistemas de gestão e backups. Resposta rápida. Zarix IT.',
-    images: [{ url: 'https://zarix.site/og-image.png' }],
+    images: [{ url: 'https://zarix.site/og-image.jpg' }],
     locale: 'pt_PT',
   },
-  twitter: { card: 'summary_large_image', images: ['https://zarix.site/og-image.png'] },
+  twitter: { card: 'summary_large_image', images: ['https://zarix.site/og-image.jpg'] },
 }
 
 const breadcrumbSchema = {

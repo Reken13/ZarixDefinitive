@@ -19,10 +19,10 @@ export const metadata: Metadata = {
     type: 'article',
     title: 'Website ou Instagram para o teu restaurante? | Zarix Blog',
     description: 'Website vs Instagram restaurante: o que escolher? Descobre o que cada plataforma faz pelo teu negócio e por que a maioria dos restaurantes precisa das duas.',
-    images: [{ url: 'https://zarix.site/og-image.png' }],
+    images: [{ url: 'https://zarix.site/og-image.jpg' }],
     locale: 'pt_PT',
   },
-  twitter: { card: 'summary_large_image', images: ['https://zarix.site/og-image.png'] },
+  twitter: { card: 'summary_large_image', images: ['https://zarix.site/og-image.jpg'] },
 }
 
 const blogPostingSchema = {

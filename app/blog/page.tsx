@@ -19,10 +19,10 @@ export const metadata: Metadata = {
     url: 'https://zarix.site/blog',
     title: 'Blog Zarix — Dicas de IT e Tecnologia para PMEs',
     description: 'Artigos práticos sobre websites, suporte IT, cibersegurança e chatbots para restaurantes e PMEs em Aveiro.',
-    images: [{ url: 'https://zarix.site/og-image.png' }],
+    images: [{ url: 'https://zarix.site/og-image.jpg' }],
     locale: 'pt_PT',
   },
-  twitter: { card: 'summary_large_image', images: ['https://zarix.site/og-image.png'] },
+  twitter: { card: 'summary_large_image', images: ['https://zarix.site/og-image.jpg'] },
 }
 
 const blogSchema = {

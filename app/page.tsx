@@ -24,12 +24,12 @@ export const metadata: Metadata = {
     title: 'Zarix — Suporte IT e Websites para PMEs em Aveiro',
     description:
       'Suporte IT e criação de websites para restaurantes e PMEs em Aveiro. Redes Wi-Fi, cibersegurança, chatbots com IA. Diagnóstico gratuito.',
-    images: [{ url: 'https://zarix.site/og-image.png', width: 1200, height: 630 }],
+    images: [{ url: 'https://zarix.site/og-image.jpg', width: 1200, height: 630 }],
     locale: 'pt_PT',
   },
   twitter: {
     card: 'summary_large_image',
-    images: ['https://zarix.site/og-image.png'],
+    images: ['https://zarix.site/og-image.jpg'],
   },
 }
 
