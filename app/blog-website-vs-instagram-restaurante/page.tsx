@@ -16,9 +16,10 @@ export const metadata: Metadata = {
   },
   openGraph: {
     type: 'article',
+    url: 'https://zarix.site/blog-website-vs-instagram-restaurante',
     title: 'Website ou Instagram para o teu restaurante? | Zarix Blog',
     description: 'Website vs Instagram restaurante: o que escolher? Descobre o que cada plataforma faz pelo teu negócio e por que a maioria dos restaurantes precisa das duas.',
-    images: [{ url: 'https://zarix.site/og-image.jpg' }],
+    images: [{ url: 'https://zarix.site/og-image.jpg', width: 1200, height: 630 }],
     locale: 'pt_PT',
   },
   twitter: { card: 'summary_large_image', images: ['https://zarix.site/og-image.jpg'] },

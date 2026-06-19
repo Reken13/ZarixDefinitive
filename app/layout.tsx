@@ -20,11 +20,13 @@ const archivo = Archivo({
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://zarix.site'),
+  manifest: '/manifest.json',
   icons: {
     icon: [
       { url: '/favicon.ico', type: 'image/png' },
       { url: '/favicon-32.png', sizes: '32x32', type: 'image/png' },
       { url: '/favicon-192.png', sizes: '192x192', type: 'image/png' },
+      { url: '/favicon-512.png', sizes: '512x512', type: 'image/png' },
     ],
     apple: [{ url: '/apple-touch-icon.png', sizes: '180x180', type: 'image/png' }],
   },
@@ -76,6 +78,8 @@ const localBusinessSchema = {
   ],
   sameAs: [
     'https://www.instagram.com/zarix_it/',
+    'https://www.facebook.com/profile.php?id=61590085367925',
+    'https://www.linkedin.com/company/zarixit',
     'https://wa.me/351967608772',
   ],
 }

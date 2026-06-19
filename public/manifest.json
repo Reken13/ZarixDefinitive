@@ -1,0 +1,13 @@
+{
+  "name": "Zarix — Suporte IT e Websites",
+  "short_name": "Zarix",
+  "description": "Suporte IT e criação de websites para restaurantes e PMEs em Aveiro.",
+  "start_url": "/",
+  "display": "browser",
+  "background_color": "#0D1B3E",
+  "theme_color": "#0D1B3E",
+  "icons": [
+    { "src": "/favicon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "/favicon-512.png", "sizes": "512x512", "type": "image/png" }
+  ]
+}
