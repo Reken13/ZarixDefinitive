@@ -1,11 +1,5 @@
 'use client'
 
-declare global {
-  interface Window {
-    gtag?: (...args: unknown[]) => void
-  }
-}
-
 function trackWhatsApp() {
   if (typeof window !== 'undefined' && window.gtag) {
     window.gtag('event', 'whatsapp_click', {

@@ -2,12 +2,6 @@
 
 import { useState } from 'react'
 
-declare global {
-  interface Window {
-    gtag?: (...args: unknown[]) => void
-  }
-}
-
 function trackLead() {
   if (typeof window !== 'undefined' && window.gtag) {
     window.gtag('event', 'generate_lead', { event_category: 'contact', event_label: 'form_submit' })

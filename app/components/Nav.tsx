@@ -46,7 +46,7 @@ export default function Nav() {
           onClick={closeAll}
         >
           {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src="/zarix-z.png" alt="Zarix" className="w-7 h-7 block" />
+          <img src="/zarix-z.png" alt="Zarix" className="w-7 h-7 block" width={28} height={28} />
           <span className="font-heading font-extrabold text-2xl tracking-[-0.02em]">
             Zari<span className="text-cyan">x</span>
           </span>
@@ -68,6 +68,8 @@ export default function Nav() {
           <div className="relative" ref={dropdownRef}>
             <button
               onClick={() => setDesktopOutrosOpen(!desktopOutrosOpen)}
+              aria-haspopup="true"
+              aria-expanded={desktopOutrosOpen}
               className="flex items-center gap-1 text-[#F4F1EA] opacity-60 hover:opacity-100 text-[0.92rem] font-medium transition-opacity bg-transparent border-0 cursor-pointer"
             >
               Outros
@@ -110,6 +112,7 @@ export default function Nav() {
             className="md:hidden p-2 text-[#F4F1EA]"
             onClick={() => setMobileOpen(!mobileOpen)}
             aria-label="Menu"
+            aria-expanded={mobileOpen}
           >
             <span className="block w-5 h-0.5 bg-current mb-1" />
             <span className="block w-5 h-0.5 bg-current mb-1" />
@@ -135,6 +138,8 @@ export default function Nav() {
           <div>
             <button
               onClick={() => setMobileOutrosOpen(!mobileOutrosOpen)}
+              aria-haspopup="true"
+              aria-expanded={mobileOutrosOpen}
               className="flex items-center justify-between w-full text-[#F4F1EA] font-medium text-base bg-transparent border-0 cursor-pointer py-0"
             >
               Outros

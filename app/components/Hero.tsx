@@ -2,12 +2,6 @@
 
 import { useEffect, useRef } from 'react'
 
-declare global {
-  interface Window {
-    gtag?: (...args: unknown[]) => void
-  }
-}
-
 const PROBLEMS = [
   'Impressora encravada',
   'PC lento',
@@ -34,20 +28,23 @@ interface Token {
 }
 
 export default function Hero() {
+  const sectionRef = useRef<HTMLElement>(null)
   const layerRef = useRef<HTMLDivElement>(null)
   const fxRef = useRef<HTMLDivElement>(null)
   const hubRef = useRef<HTMLDivElement>(null)
   const counterRef = useRef<HTMLSpanElement>(null)
 
   useEffect(() => {
+    const section = sectionRef.current
     const layer = layerRef.current
     const fx = fxRef.current
     const hub = hubRef.current
     const counter = counterRef.current
-    if (!layer) return
+    if (!layer || !section) return
 
     let mounted = true
     let raf = 0
+    let visible = true
     const tokens: Token[] = []
     let resolvedCount = 0
     let pIndex = 0
@@ -154,6 +151,7 @@ export default function Hero() {
 
     function loop() {
       if (!mounted) return
+      if (!visible) { raf = requestAnimationFrame(loop); return }
       if (layer) {
         const w = layer.clientWidth
         const h = layer.clientHeight
@@ -190,7 +188,7 @@ export default function Hero() {
     raf = requestAnimationFrame(loop)
 
     const onWheel = () => absorbAll()
-    window.addEventListener('wheel', onWheel, { passive: true })
+    layer.addEventListener('wheel', onWheel, { passive: true })
 
     const onMove = (e: MouseEvent) => {
       const r = layer.getBoundingClientRect()
@@ -200,17 +198,25 @@ export default function Hero() {
     layer.addEventListener('mousemove', onMove)
     layer.addEventListener('mouseleave', onLeave)
 
+    const observer = new IntersectionObserver(
+      ([entry]) => { visible = entry.isIntersecting },
+      { threshold: 0 }
+    )
+    observer.observe(section)
+
     return () => {
       mounted = false
       cancelAnimationFrame(raf)
-      window.removeEventListener('wheel', onWheel)
+      layer.removeEventListener('wheel', onWheel)
       layer.removeEventListener('mousemove', onMove)
       layer.removeEventListener('mouseleave', onLeave)
+      observer.disconnect()
     }
   }, [])
 
   return (
     <section
+      ref={sectionRef}
       className="bg-navy"
       style={{ minHeight: '100vh', display: 'flex', flexDirection: 'column' }}
     >
@@ -346,7 +352,7 @@ export default function Hero() {
                   style={{ inset: 10, borderRadius: '50%', border: '1px solid rgba(255,255,255,0.06)' }}
                 />
                 {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src="/zarix-z.png" alt="Zarix" className="block" style={{ width: 74, height: 74 }} />
+                <img src="/zarix-z.png" alt="Zarix" className="block" width={74} height={74} style={{ width: 74, height: 74 }} />
               </div>
               <span className="font-heading font-extrabold text-[1.05rem] tracking-[-0.01em] text-[#F4F1EA]">
                 Zarix

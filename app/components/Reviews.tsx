@@ -40,7 +40,7 @@ export default function Reviews() {
             </svg>
             <div className="flex flex-col gap-0.5">
               <span className="font-heading font-bold text-[1.02rem] text-[#F4F1EA]">Avaliações Google</span>
-              <span className="text-[#FBBC05] text-[0.95rem] tracking-[2px]">★★★★★</span>
+              <span className="text-[#FBBC05] text-[0.95rem] tracking-[2px]" aria-label="5 estrelas">★★★★★</span>
             </div>
           </div>
 
@@ -82,7 +82,7 @@ export default function Reviews() {
                 padding: 'clamp(26px,2.6vw,34px)',
               }}
             >
-              <span className="text-cyan text-[0.92rem] tracking-[2px]">★★★★★</span>
+              <span className="text-cyan text-[0.92rem] tracking-[2px]" aria-label="5 estrelas">★★★★★</span>
               <p className="text-[1.02rem] leading-[1.6] text-[#E4E7EE] flex-1">{r.text}</p>
               <div className="flex flex-col gap-0.5">
                 <span className="font-bold text-[#F4F1EA] text-[0.92rem]">{r.name}</span>

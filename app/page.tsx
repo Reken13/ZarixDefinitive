@@ -101,7 +101,7 @@ export default function Home() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
       <Nav />
-      <main>
+      <main id="main-content">
         <Hero />
         <Reelfolio />
         <Services />

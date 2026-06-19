@@ -23,7 +23,7 @@ export const metadata: Metadata = {
   manifest: '/manifest.json',
   icons: {
     icon: [
-      { url: '/favicon.ico', type: 'image/png' },
+      { url: '/favicon.ico', type: 'image/x-icon' },
       { url: '/favicon-32.png', sizes: '32x32', type: 'image/png' },
       { url: '/favicon-192.png', sizes: '192x192', type: 'image/png' },
       { url: '/favicon-512.png', sizes: '512x512', type: 'image/png' },
@@ -61,13 +61,6 @@ const localBusinessSchema = {
     { '@type': 'AdministrativeArea', name: 'Distrito de Aveiro' },
   ],
   priceRange: '€€',
-  aggregateRating: {
-    '@type': 'AggregateRating',
-    ratingValue: '5.0',
-    reviewCount: '3',
-    bestRating: '5',
-    worstRating: '1',
-  },
   openingHoursSpecification: [
     {
       '@type': 'OpeningHoursSpecification',
@@ -94,6 +87,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         />
       </head>
       <body className="bg-navy text-[#F4F1EA] font-sans antialiased">
+        <a
+          href="#main-content"
+          className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[9999] focus:bg-cyan focus:text-white focus:px-4 focus:py-2 focus:font-semibold focus:text-sm"
+        >
+          Saltar para o conteúdo
+        </a>
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-WL0GVH0WDH"
           strategy="afterInteractive"
