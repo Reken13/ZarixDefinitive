@@ -14,7 +14,7 @@ export default function Footer() {
       >
         <a href="/" className="flex items-center gap-2.5 text-[#F4F1EA] no-underline">
           {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src="/zarix-z.jpg" alt="Zarix" className="block rounded-full object-cover" style={{ width: 26, height: 26 }} />
+          <img src="/zarix-z.png" alt="Zarix" className="block" style={{ width: 26, height: 26 }} />
           <span className="font-heading font-extrabold text-[1.2rem] text-[#F4F1EA]">
             Zari<span className="text-cyan">x</span>
           </span>
