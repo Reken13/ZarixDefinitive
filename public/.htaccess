@@ -3,6 +3,9 @@ DirectoryIndex index.html
 RewriteEngine On
 RewriteBase /
 
+# Redirect old blog post slug to correct /blog/ hierarchy
+RewriteRule ^blog-website-vs-instagram-restaurante/?$ /blog/website-vs-instagram-restaurante [R=301,L,NE]
+
 # Redirect www to non-www (canonical domain)
 RewriteCond %{HTTP_HOST} ^www\.zarix\.site [NC]
 RewriteRule ^ https://zarix.site%{REQUEST_URI} [R=301,L,NE]

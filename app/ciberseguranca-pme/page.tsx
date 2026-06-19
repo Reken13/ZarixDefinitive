@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     type: 'website',
     title: 'Cibersegurança para PMEs | Portugal | Zarix',
     description: 'Proteção cibernética para pequenas e médias empresas em Portugal. Antivírus gerido, backups, RGPD e formação de colaboradores. Zarix IT — Aveiro.',
-    images: [{ url: 'https://zarix.site/og-image.jpg' }],
+    images: [{ url: 'https://zarix.site/og-image.jpg', width: 1200, height: 630 }],
     locale: 'pt_PT',
   },
   twitter: { card: 'summary_large_image', images: ['https://zarix.site/og-image.jpg'] },

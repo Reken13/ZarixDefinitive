@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     type: 'website',
     title: 'Chatbot WhatsApp para Restaurantes | Zarix',
     description: 'Chatbot WhatsApp para restaurantes e PMEs: reservas automáticas, respostas 24h, menu digital integrado. Sem perder clientes fora de horário. Zarix IT.',
-    images: [{ url: 'https://zarix.site/og-image.jpg' }],
+    images: [{ url: 'https://zarix.site/og-image.jpg', width: 1200, height: 630 }],
     locale: 'pt_PT',
   },
   twitter: { card: 'summary_large_image', images: ['https://zarix.site/og-image.jpg'] },

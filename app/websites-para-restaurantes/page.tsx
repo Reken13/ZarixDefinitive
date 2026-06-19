@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     type: 'website',
     title: 'Website para Restaurante | Aveiro e Portugal | Zarix',
     description: 'Website profissional para o teu restaurante: menu online, reservas, Google Maps integrado e optimizado para pesquisas locais. Zarix — Aveiro.',
-    images: [{ url: 'https://zarix.site/og-image.jpg' }],
+    images: [{ url: 'https://zarix.site/og-image.jpg', width: 1200, height: 630 }],
     locale: 'pt_PT',
   },
   twitter: { card: 'summary_large_image', images: ['https://zarix.site/og-image.jpg'] },

@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     url: 'https://zarix.site/blog',
     title: 'Blog Zarix — Dicas de IT e Tecnologia para PMEs',
     description: 'Artigos práticos sobre websites, suporte IT, cibersegurança e chatbots para restaurantes e PMEs em Aveiro.',
-    images: [{ url: 'https://zarix.site/og-image.jpg' }],
+    images: [{ url: 'https://zarix.site/og-image.jpg', width: 1200, height: 630 }],
     locale: 'pt_PT',
   },
   twitter: { card: 'summary_large_image', images: ['https://zarix.site/og-image.jpg'] },
@@ -50,7 +50,7 @@ const breadcrumbSchema = {
 
 const posts = [
   {
-    slug: 'blog-website-vs-instagram-restaurante',
+    slug: 'blog/website-vs-instagram-restaurante',
     title: 'Website ou Instagram: o que faz mais sentido para o teu restaurante?',
     description: 'Website vs Instagram restaurante: o que escolher? Descobre o que cada plataforma faz pelo teu negócio e por que a maioria dos restaurantes precisa das duas.',
     date: '28 de Maio de 2026',

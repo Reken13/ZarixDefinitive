@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     type: 'website',
     title: 'Redes Wi-Fi para Empresas em Aveiro | Zarix',
     description: 'Instalação e configuração de redes Wi-Fi profissionais para empresas em Aveiro. Rede separada para clientes e staff, VPN e monitorização. Zarix IT.',
-    images: [{ url: 'https://zarix.site/og-image.jpg' }],
+    images: [{ url: 'https://zarix.site/og-image.jpg', width: 1200, height: 630 }],
     locale: 'pt_PT',
   },
   twitter: { card: 'summary_large_image', images: ['https://zarix.site/og-image.jpg'] },

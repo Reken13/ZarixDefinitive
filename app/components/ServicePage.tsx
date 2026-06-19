@@ -64,6 +64,7 @@ function Accordion({ faqs }: { faqs: FAQ[] }) {
 }
 
 export default function ServicePage({
+  slug,
   breadcrumbLabel,
   h1,
   subtitle,
@@ -73,8 +74,22 @@ export default function ServicePage({
   faqSchema,
   breadcrumbSchema,
 }: ServicePageProps) {
+  const serviceSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Service',
+    name: h1,
+    description: intro,
+    provider: { '@type': 'LocalBusiness', '@id': 'https://zarix.site/#business' },
+    areaServed: { '@type': 'City', name: 'Aveiro' },
+    url: `https://zarix.site/${slug}`,
+  }
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
+      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}

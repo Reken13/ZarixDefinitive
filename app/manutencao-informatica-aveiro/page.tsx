@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     type: 'website',
     title: 'Manutenção Informática em Aveiro | Zarix',
     description: 'Manutenção e reparação informática para empresas em Aveiro. Diagnóstico, reparação de PCs e portáteis, remoção de vírus e upgrades. Zarix IT.',
-    images: [{ url: 'https://zarix.site/og-image.jpg' }],
+    images: [{ url: 'https://zarix.site/og-image.jpg', width: 1200, height: 630 }],
     locale: 'pt_PT',
   },
   twitter: { card: 'summary_large_image', images: ['https://zarix.site/og-image.jpg'] },
