@@ -68,6 +68,7 @@ export default function About() {
               <img
                 src={person.src}
                 alt={person.alt}
+                loading="lazy"
                 style={{
                   width: '100%',
                   height: 'clamp(360px,30vw,460px)',

@@ -145,7 +145,7 @@ export default function BlogPage() {
                     }}
                   >
                     {/* eslint-disable-next-line @next/next/no-img-element */}
-                    <img src="/zarix-z.png" alt="" className="opacity-20" style={{ width: 56, height: 56 }} />
+                    <img src="/zarix-z.png" alt="" loading="lazy" className="opacity-20" style={{ width: 56, height: 56 }} />
                   </div>
                 </Link>
               ))}

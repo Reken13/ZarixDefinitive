@@ -7,13 +7,13 @@ const projects = [
     title: 'Casa Lista',
     category: 'Comida caseira',
     description: 'Loja online de refeições com pedidos diretos. Página rápida, pensada para encomendar em poucos toques.',
-    img: '/portfolio-1.1.png',
+    img: '/portfolio-1.1.jpg',
   },
   {
     title: 'LaRiaPet',
     category: 'Veterinária',
     description: 'Site de marcações para uma clínica veterinária, com agenda online e presença forte no Google.',
-    img: '/portfolio-2.1.png',
+    img: '/portfolio-2.1.jpg',
   },
 ]
 
@@ -140,6 +140,7 @@ export default function Reelfolio() {
                 <img
                   src={p.img}
                   alt={i < projects.length ? p.title : ''}
+                  loading="lazy"
                   style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'top', display: 'block' }}
                 />
               </div>
