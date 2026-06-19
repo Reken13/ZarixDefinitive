@@ -346,7 +346,7 @@ export default function Hero() {
                   style={{ inset: 10, borderRadius: '50%', border: '1px solid rgba(255,255,255,0.06)' }}
                 />
                 {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src="/zarix-z.svg" alt="Zarix" className="block" style={{ width: 74, height: 74 }} />
+                <img src="/zarix-z.jpg" alt="Zarix" className="block rounded-full object-cover" style={{ width: 74, height: 74 }} />
               </div>
               <span className="font-heading font-extrabold text-[1.05rem] tracking-[-0.01em] text-[#F4F1EA]">
                 Zarix
