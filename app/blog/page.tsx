@@ -50,6 +50,38 @@ const breadcrumbSchema = {
 
 const posts = [
   {
+    slug: 'blog/backup-dados-empresas-guia',
+    title: 'Backup de Dados: O Que Nenhum Empresário Quer Descobrir Tarde Demais',
+    description: 'O que acontece quando uma empresa perde os seus dados — e como evitar que isso te aconteça. Guia prático de backup para PMEs em Aveiro.',
+    date: '17 de Junho de 2026',
+    category: 'Cibersegurança',
+    readTime: '6 min',
+  },
+  {
+    slug: 'blog/wifi-lento-restaurante-como-resolver',
+    title: 'Wi-Fi Lento no Restaurante: Causas, Custos e Soluções',
+    description: 'Wi-Fi lento no restaurante afasta clientes e prejudica operações. Descobre as causas mais comuns, quanto custa realmente e como resolver de vez.',
+    date: '14 de Junho de 2026',
+    category: 'Redes Wi-Fi',
+    readTime: '6 min',
+  },
+  {
+    slug: 'blog/google-business-profile-restaurantes-aveiro',
+    title: 'Google Business Profile para Restaurantes em Aveiro: Guia Prático',
+    description: 'Como optimizar o Google Business Profile do teu restaurante em Aveiro para aparecer nas pesquisas locais e atrair mais clientes. Guia passo a passo.',
+    date: '10 de Junho de 2026',
+    category: 'Marketing Digital',
+    readTime: '7 min',
+  },
+  {
+    slug: 'blog/ciberseguranca-5-erros-pme',
+    title: '5 Erros de Cibersegurança que as PMEs Cometem (e Como Evitar)',
+    description: 'Os 5 erros de cibersegurança mais comuns nas PMEs portuguesas e como corrigi-los antes que causem danos reais ao teu negócio.',
+    date: '5 de Junho de 2026',
+    category: 'Cibersegurança',
+    readTime: '6 min',
+  },
+  {
     slug: 'blog/website-vs-instagram-restaurante',
     title: 'Website ou Instagram: o que faz mais sentido para o teu restaurante?',
     description: 'Website vs Instagram restaurante: o que escolher? Descobre o que cada plataforma faz pelo teu negócio e por que a maioria dos restaurantes precisa das duas.',
