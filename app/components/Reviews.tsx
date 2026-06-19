@@ -1,21 +1,18 @@
 const reviews = [
   {
-    stars: 5,
-    text: 'A impressora da cozinha falhava a meio do serviço. A Zarix resolveu no próprio dia e nunca mais voltou a acontecer.',
-    name: 'Restaurante em Aveiro',
-    sub: 'Cliente de suporte',
+    text: 'Bom suporte ao conserto de PC',
+    name: 'José Arthur Emanuel Alves da Silva',
+    sub: 'Há 3 semanas',
   },
   {
-    stars: 5,
-    text: 'Fizeram o nosso site de raiz e começámos a receber pedidos pelo Google logo na primeira semana.',
-    name: 'Negócio local',
-    sub: 'Cliente de website',
+    text: 'Tive uma excelente experiência com a Zarix. A equipa demonstrou profissionalismo, rapidez e um grande conhecimento técnico desde o primeiro contacto. O diagnóstico IT gratuito foi muito útil para identificar oportunidades de melhoria na nossa infraestrutura sem qualquer compromisso.',
+    name: 'Valeria Mendoza',
+    sub: 'Há 2 semanas',
   },
   {
-    stars: 5,
-    text: 'Sempre que ligo, respondem. É a tranquilidade de saber que há quem trate da parte técnica por mim.',
-    name: 'Gestora de loja',
-    sub: 'Cliente desde 2023',
+    text: 'Tenho uma barbearia pequena e fizeram um sistema de reservas top, agradeço',
+    name: 'Bernardo',
+    sub: 'Há 2 semanas',
   },
 ]
 
