@@ -57,7 +57,7 @@ export default function Reviews() {
           </div>
 
           <a
-            href="https://maps.app.goo.gl/nTW6ooXETwocbRws8"
+            href="https://maps.app.goo.gl/1HTBQUKQ56eqn3BG7"
             target="_blank"
             rel="noopener noreferrer"
             className="text-[0.82rem] text-[#7A8295] hover:text-cyan transition-colors underline underline-offset-2 ml-auto"
