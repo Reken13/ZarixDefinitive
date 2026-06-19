@@ -65,46 +65,91 @@ export default function BlogPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(blogSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <Nav />
-      <main>
-        <section className="pt-32 pb-16 px-6 md:px-12 max-w-6xl mx-auto">
-          <p className="text-xs font-bold uppercase tracking-widest text-cyan mb-6">Blog</p>
-          <h1 className="text-3xl md:text-5xl font-black text-navy leading-tight mb-6">
-            Dicas de IT e Tecnologia para a tua PME
-          </h1>
-          <p className="text-gray-500 text-base md:text-lg max-w-xl leading-relaxed">
-            Artigos práticos sobre websites, suporte IT, cibersegurança e automação. Escritos para donos de negócio, não para técnicos.
-          </p>
+      <main className="bg-navy">
+        {/* Header */}
+        <section style={{ borderTop: '1px solid rgba(255,255,255,0.08)', paddingTop: 64 }}>
+          <div
+            className="max-w-[1200px] mx-auto"
+            style={{ padding: 'clamp(48px,6vh,80px) clamp(24px,4vw,56px) clamp(40px,5vh,64px)' }}
+          >
+            <div className="text-[0.74rem] font-bold tracking-[0.18em] uppercase text-cyan mb-[18px]">
+              Blog
+            </div>
+            <h1
+              className="font-heading text-[#F4F1EA] m-0 max-w-[22ch]"
+              style={{
+                fontWeight: 900,
+                fontSize: 'clamp(1.9rem,3.8vw,3.1rem)',
+                lineHeight: 1.02,
+                letterSpacing: '-0.02em',
+              }}
+            >
+              Dicas de IT e tecnologia para a tua PME.
+            </h1>
+            <p
+              className="text-[#9AA4B8] max-w-[38rem]"
+              style={{ fontSize: 'clamp(1rem,1.4vw,1.16rem)', lineHeight: 1.55, marginTop: 20 }}
+            >
+              Artigos práticos sobre websites, suporte IT, cibersegurança e automação. Escritos para donos de negócio, não para técnicos.
+            </p>
+          </div>
         </section>
 
-        <section className="pb-24 px-6 md:px-12 max-w-6xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {posts.map((post) => (
-              <Link
-                key={post.slug}
-                href={`/${post.slug}`}
-                className="group border border-gray-100 p-8 hover:border-navy transition-colors block"
-              >
-                <div className="flex items-center gap-3 mb-4">
-                  <span className="text-xs font-bold uppercase tracking-widest text-cyan">
-                    {post.category}
-                  </span>
-                  <span className="text-gray-300">·</span>
-                  <span className="text-gray-400 text-xs">{post.readTime} de leitura</span>
-                </div>
-                <h2 className="text-xl font-black text-navy leading-tight mb-3 group-hover:text-[#1a2f6b] transition-colors">
-                  {post.title}
-                </h2>
-                <p className="text-gray-500 text-sm leading-relaxed mb-6">
-                  {post.description}
-                </p>
-                <div className="flex items-center justify-between">
-                  <span className="text-gray-400 text-xs">{post.date}</span>
-                  <span className="text-navy text-sm font-semibold group-hover:underline">
-                    Ler artigo
-                  </span>
-                </div>
-              </Link>
-            ))}
+        {/* Posts */}
+        <section style={{ paddingBottom: 'clamp(70px,9vh,118px)' }}>
+          <div
+            className="max-w-[1200px] mx-auto"
+            style={{ padding: '0 clamp(24px,4vw,56px)' }}
+          >
+            <div className="flex flex-col gap-5">
+              {posts.map((post) => (
+                <Link
+                  key={post.slug}
+                  href={`/${post.slug}`}
+                  className="no-underline group flex flex-col md:flex-row hover:border-cyan transition-colors"
+                  style={{
+                    background: '#13244E',
+                    border: '1px solid rgba(255,255,255,0.08)',
+                    borderTop: '1px solid rgba(255,255,255,0.14)',
+                  }}
+                >
+                  {/* Text column */}
+                  <div className="flex flex-col justify-center flex-1 p-8">
+                    <span className="text-[0.82rem] font-bold uppercase tracking-[0.08em] text-cyan mb-3">
+                      {post.category}
+                    </span>
+                    <h2
+                      className="font-heading text-[#F4F1EA] m-0 mb-3"
+                      style={{ fontWeight: 800, fontSize: 'clamp(1.2rem,2vw,1.5rem)', lineHeight: 1.15, letterSpacing: '-0.01em' }}
+                    >
+                      {post.title}
+                    </h2>
+                    <p className="text-[0.96rem] leading-[1.55] text-[#9AA4B8] mb-6">
+                      {post.description}
+                    </p>
+                    <div className="flex items-center justify-between gap-4">
+                      <span className="text-[0.82rem] text-[#7A8295]">{post.date} · {post.readTime} de leitura</span>
+                      <span className="text-cyan text-[0.9rem] font-semibold inline-flex items-center gap-1.5">
+                        Ler artigo <span className="font-heading">→</span>
+                      </span>
+                    </div>
+                  </div>
+
+                  {/* Visual panel */}
+                  <div
+                    className="hidden md:flex items-center justify-center shrink-0"
+                    style={{
+                      width: 200,
+                      background: '#0A1531',
+                      borderLeft: '1px solid rgba(255,255,255,0.08)',
+                    }}
+                  >
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img src="/zarix-z.png" alt="" className="opacity-20" style={{ width: 56, height: 56 }} />
+                  </div>
+                </Link>
+              ))}
+            </div>
           </div>
         </section>
       </main>

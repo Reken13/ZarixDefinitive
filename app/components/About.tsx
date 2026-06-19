@@ -1,14 +1,10 @@
-import Image from 'next/image'
-
 const team = [
   {
     src: '/foto-ricardo.jpg',
-    alt: 'Ricardo, fundador da Zarix',
+    alt: 'Ricardo Betancourt, fundador da Zarix',
     name: 'Ricardo Betancourt',
     role: 'Fundador · Suporte IT',
     bio: 'O técnico IT de confiança de dezenas de negócios em Aveiro. Aparece quando precisa, resolve o problema e explica tudo de forma clara.',
-    objectPosition: 'object-top',
-    priority: true,
   },
   {
     src: '/foto-luis.jpg',
@@ -16,55 +12,97 @@ const team = [
     name: 'Luis Arias',
     role: 'Co-fundador · Desenvolvimento',
     bio: 'Especialista em programação e desenvolvimento web. Cria os websites e soluções digitais que fazem crescer o negócio dos nossos clientes.',
-    objectPosition: 'object-center',
-    priority: false,
   },
 ]
 
 export default function About() {
   return (
-    <section className="bg-navy py-24 md:py-32">
-      <div className="max-w-6xl mx-auto px-6 md:px-12">
-        <div className="text-center mb-16">
-          <p className="text-xs font-bold uppercase tracking-widest text-cyan mb-4">
+    <section
+      id="equipa"
+      className="bg-navy"
+      style={{ borderTop: '1px solid rgba(255,255,255,0.08)' }}
+    >
+      <div
+        className="max-w-[1200px] mx-auto"
+        style={{ padding: 'clamp(70px,9vh,118px) clamp(24px,4vw,56px)' }}
+      >
+        {/* Intro */}
+        <div
+          className="text-center max-w-[760px] mx-auto"
+          style={{ marginBottom: 'clamp(48px,6vh,72px)' }}
+        >
+          <div className="text-[0.74rem] font-bold tracking-[0.18em] uppercase text-cyan mb-[18px]">
             Quem somos
-          </p>
-          <h2 className="text-3xl md:text-4xl font-black text-white leading-tight mb-4">
+          </div>
+          <h2
+            className="font-heading text-[#F4F1EA] m-0"
+            style={{
+              fontWeight: 900,
+              fontSize: 'clamp(1.9rem,3.8vw,3.1rem)',
+              lineHeight: 1.04,
+              letterSpacing: '-0.02em',
+              textWrap: 'balance' as React.CSSProperties['textWrap'],
+            }}
+          >
             As pessoas por trás da Zarix.
           </h2>
-          <p className="text-gray-400 text-base max-w-lg mx-auto">
-            Sem jargão técnico, sem intermediários. Falamos directamente com os nossos clientes e resolvemos os seus problemas.
+          <p
+            className="text-[1.05rem] leading-[1.6] text-[#9AA4B8] max-w-[38rem] mx-auto"
+            style={{ marginTop: 22 }}
+          >
+            Sem jargão técnico e sem intermediários. Quando nos liga, fala connosco, conhecemos o seu negócio pelo nome e resolvemos os seus problemas.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 max-w-3xl mx-auto">
+        {/* Team grid */}
+        <div
+          className="grid max-w-[880px] mx-auto"
+          style={{
+            gridTemplateColumns: 'repeat(auto-fit,minmax(280px,1fr))',
+            gap: 'clamp(36px,5vw,72px)',
+          }}
+        >
           {team.map((person) => (
             <div key={person.name} className="flex flex-col items-center text-center">
-              <div className="relative w-52 h-64 md:w-60 md:h-72 overflow-hidden mb-6">
-                <Image
-                  src={person.src}
-                  alt={person.alt}
-                  fill
-                  className={`object-cover ${person.objectPosition}`}
-                  sizes="(max-width: 768px) 208px, 240px"
-                  priority={person.priority}
-                />
-              </div>
-              <h3 className="text-xl font-black text-white mb-1">{person.name}</h3>
-              <p className="text-cyan text-sm font-semibold mb-4">{person.role}</p>
-              <p className="text-gray-300 text-sm leading-relaxed max-w-xs">{person.bio}</p>
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src={person.src}
+                alt={person.alt}
+                style={{
+                  width: '100%',
+                  height: 'clamp(360px,30vw,460px)',
+                  objectFit: 'cover',
+                  objectPosition: 'top',
+                  display: 'block',
+                  border: '1px solid rgba(255,255,255,0.1)',
+                }}
+              />
+              <h3
+                className="font-heading text-[#F4F1EA] mt-6"
+                style={{ fontWeight: 800, fontSize: '1.35rem', letterSpacing: '-0.01em' }}
+              >
+                {person.name}
+              </h3>
+              <span className="text-[0.92rem] text-cyan font-semibold mt-1.5">
+                {person.role}
+              </span>
+              <p
+                className="text-[0.96rem] leading-[1.6] text-[#9AA4B8] max-w-[24rem]"
+                style={{ marginTop: 16 }}
+              >
+                {person.bio}
+              </p>
             </div>
           ))}
         </div>
 
-        <div className="flex justify-center mt-14">
+        {/* CTA */}
+        <div className="flex justify-center" style={{ marginTop: 'clamp(44px,6vh,68px)' }}>
           <a
-            href="https://wa.me/351967608772"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center justify-center bg-white text-navy font-semibold px-8 py-4 hover:bg-gray-100 transition-colors text-base"
+            href="/#contacto"
+            className="inline-flex items-center gap-2.5 bg-paper text-navy font-semibold text-base px-[30px] py-4 no-underline transition-colors hover:bg-cyan hover:text-white"
           >
-            Falar com a equipa
+            Falar com a equipa <span className="font-heading">→</span>
           </a>
         </div>
       </div>

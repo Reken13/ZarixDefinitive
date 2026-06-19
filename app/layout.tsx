@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { Manrope, Barlow } from 'next/font/google'
+import { Manrope, Archivo } from 'next/font/google'
 import Script from 'next/script'
 import './globals.css'
 import WhatsAppFAB from './components/WhatsAppFAB'
@@ -11,10 +11,10 @@ const manrope = Manrope({
   display: 'swap',
 })
 
-const barlow = Barlow({
+const archivo = Archivo({
   subsets: ['latin'],
-  weight: ['900'],
-  variable: '--font-barlow',
+  weight: ['600', '700', '800', '900'],
+  variable: '--font-archivo',
   display: 'swap',
 })
 
@@ -82,14 +82,14 @@ const localBusinessSchema = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="pt-PT" className={`${manrope.variable} ${barlow.variable}`}>
+    <html lang="pt-PT" className={`${manrope.variable} ${archivo.variable}`}>
       <head>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
         />
       </head>
-      <body className="bg-white text-gray-900 font-sans antialiased">
+      <body className="bg-navy text-[#F4F1EA] font-sans antialiased">
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-WL0GVH0WDH"
           strategy="afterInteractive"
