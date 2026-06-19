@@ -16,10 +16,10 @@ export const metadata: Metadata = {
     type: 'website',
     title: 'Suporte IT em Aveiro | Empresas e PMEs | Zarix',
     description: 'Suporte informático para empresas e PMEs em Aveiro. Manutenção, redes, segurança e assistência presencial. Resposta em 24h. Zarix IT.',
-    images: [{ url: 'https://zarix.site/og-image.png' }],
+    images: [{ url: 'https://zarix.site/og-image.jpg' }],
     locale: 'pt_PT',
   },
-  twitter: { card: 'summary_large_image', images: ['https://zarix.site/og-image.png'] },
+  twitter: { card: 'summary_large_image', images: ['https://zarix.site/og-image.jpg'] },
 }
 
 const breadcrumbSchema = {

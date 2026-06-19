@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import Nav from './components/Nav'
 import Hero from './components/Hero'
 import Reelfolio from './components/Reelfolio'
+import Services from './components/Services'
 import Reviews from './components/Reviews'
 import About from './components/About'
 import Contact from './components/Contact'
@@ -24,12 +25,12 @@ export const metadata: Metadata = {
     title: 'Zarix — Suporte IT e Websites para PMEs em Aveiro',
     description:
       'Suporte IT e criação de websites para restaurantes e PMEs em Aveiro. Redes Wi-Fi, cibersegurança, chatbots com IA. Diagnóstico gratuito.',
-    images: [{ url: 'https://zarix.site/og-image.png', width: 1200, height: 630 }],
+    images: [{ url: 'https://zarix.site/og-image.jpg', width: 1200, height: 630 }],
     locale: 'pt_PT',
   },
   twitter: {
     card: 'summary_large_image',
-    images: ['https://zarix.site/og-image.png'],
+    images: ['https://zarix.site/og-image.jpg'],
   },
 }
 
@@ -103,6 +104,7 @@ export default function Home() {
       <main>
         <Hero />
         <Reelfolio />
+        <Services />
         <Reviews />
         <About />
         <Contact />

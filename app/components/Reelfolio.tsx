@@ -1,144 +1,166 @@
 'use client'
 
-import { useState, useEffect } from 'react'
+import { useEffect, useRef } from 'react'
 
 const projects = [
   {
-    title: 'Restaurante Ria',
-    category: 'Restaurante',
-    description: 'Website com menu online, galeria de pratos e reservas por WhatsApp. Optimizado para pesquisa local em Aveiro.',
+    title: 'Casa Lista',
+    category: 'Comida caseira',
+    description: 'Loja online de refeições com pedidos diretos. Página rápida, pensada para encomendar em poucos toques.',
+    img: '/portfolio-1.1.png',
   },
   {
-    title: 'Barbearia Moderna',
-    category: 'Barbearia',
-    description: 'Presença digital com agendamento online, galeria de trabalhos e contacto direto via WhatsApp.',
-  },
-  {
-    title: 'Clínica Dental Sorriso',
-    category: 'Clínica Dentária',
-    description: 'Website profissional com apresentação de serviços, equipa e marcação de consultas online.',
-  },
-  {
-    title: 'Padaria Artesanal',
-    category: 'Comércio Local',
-    description: 'Catálogo de produtos, horários atualizados e localização integrada com Google Maps.',
-  },
-  {
-    title: 'Oficina Costa',
-    category: 'Serviços Automóvel',
-    description: 'Website com serviços, avaliações de clientes e formulário de marcação de revisões.',
-  },
-  {
-    title: 'Hotel Ria de Aveiro',
-    category: 'Hotelaria',
-    description: 'Site com galeria de quartos, disponibilidade e integração com plataformas de reserva.',
+    title: 'LaRiaPet',
+    category: 'Veterinária',
+    description: 'Site de marcações para uma clínica veterinária, com agenda online e presença forte no Google.',
+    img: '/portfolio-2.1.png',
   },
 ]
 
-function DesktopMockup({ title, category }: { title: string; category: string }) {
-  return (
-    <div className="w-full rounded-t-lg overflow-hidden border border-gray-200 bg-white shadow-sm">
-      <div className="bg-gray-100 px-3 py-2 flex items-center gap-1.5">
-        <span className="w-2.5 h-2.5 rounded-full bg-gray-300" />
-        <span className="w-2.5 h-2.5 rounded-full bg-gray-300" />
-        <span className="w-2.5 h-2.5 rounded-full bg-gray-300" />
-        <div className="ml-3 flex-1 bg-white rounded h-4 px-2 flex items-center">
-          <span className="text-[8px] text-gray-400 truncate">zarix.site/{title.toLowerCase().replace(/\s/g, '-')}</span>
-        </div>
-      </div>
-      <div className="h-48 md:h-64 bg-[#F0F4F8] p-4 flex flex-col">
-        <div className="w-20 h-3 bg-navy rounded mb-3" />
-        <div className="w-full h-2 bg-gray-200 rounded mb-2" />
-        <div className="w-3/4 h-2 bg-gray-200 rounded mb-6" />
-        <div className="w-24 h-8 bg-navy rounded mb-4" />
-        <div className="grid grid-cols-3 gap-2 flex-1">
-          <div className="bg-white rounded border border-gray-100" />
-          <div className="bg-white rounded border border-gray-100" />
-          <div className="bg-white rounded border border-gray-100" />
-        </div>
-        <div className="mt-3 text-[10px] text-gray-400 text-center">{category}</div>
-      </div>
-    </div>
-  )
-}
-
-function MobileMockup({ category }: { category: string }) {
-  return (
-    <div className="w-24 md:w-32 flex-shrink-0 rounded-2xl overflow-hidden border-2 border-gray-200 bg-white shadow-sm">
-      <div className="bg-gray-950 h-4 flex items-center justify-center">
-        <span className="w-8 h-1 bg-gray-700 rounded-full" />
-      </div>
-      <div className="bg-[#F0F4F8] p-2 min-h-[160px] md:min-h-[220px] flex flex-col">
-        <div className="w-full h-2 bg-navy rounded mb-2" />
-        <div className="w-full h-1.5 bg-gray-200 rounded mb-1" />
-        <div className="w-2/3 h-1.5 bg-gray-200 rounded mb-3" />
-        <div className="w-full h-16 md:h-24 bg-white rounded border border-gray-100 mb-2" />
-        <div className="w-full h-6 bg-navy rounded mb-1" />
-        <div className="text-[8px] text-gray-400 text-center mt-auto">{category}</div>
-      </div>
-    </div>
-  )
-}
+const allCards = [...projects, ...projects]
 
 export default function Reelfolio() {
-  const [current, setCurrent] = useState(0)
-  const [visible, setVisible] = useState(true)
+  const marqueeRef = useRef<HTMLDivElement>(null)
+  const pausedRef = useRef(false)
+  const xRef = useRef(0)
+  const halfRef = useRef(0)
 
   useEffect(() => {
-    const interval = setInterval(() => {
-      setVisible(false)
-      setTimeout(() => {
-        setCurrent((prev) => (prev + 1) % projects.length)
-        setVisible(true)
-      }, 400)
-    }, 2000)
-    return () => clearInterval(interval)
+    const mq = marqueeRef.current
+    if (!mq) return
+    let raf = 0
+    let mounted = true
+
+    function measure() {
+      if (mq) halfRef.current = mq.scrollWidth / 2
+    }
+    measure()
+    setTimeout(measure, 400)
+    window.addEventListener('resize', measure)
+
+    const vp = mq.parentNode as HTMLElement | null
+    if (vp) {
+      const onEnter = () => { pausedRef.current = true }
+      const onLeave = () => { pausedRef.current = false }
+      vp.addEventListener('mouseenter', onEnter)
+      vp.addEventListener('mouseleave', onLeave)
+    }
+
+    function loop() {
+      if (!mounted) return
+      if (!pausedRef.current && halfRef.current > 0) {
+        xRef.current -= 0.5
+        if (-xRef.current >= halfRef.current) xRef.current += halfRef.current
+        if (mq) mq.style.transform = `translateX(${xRef.current}px)`
+      }
+      raf = requestAnimationFrame(loop)
+    }
+    raf = requestAnimationFrame(loop)
+
+    return () => {
+      mounted = false
+      cancelAnimationFrame(raf)
+      window.removeEventListener('resize', measure)
+    }
   }, [])
 
-  const project = projects[current]
-
   return (
-    <section id="reelfolio" className="bg-[#F7F7F7] py-24 md:py-32">
-      <div className="max-w-6xl mx-auto px-6 md:px-12">
-        <p className="text-xs font-bold uppercase tracking-widest text-cyan mb-4">
-          O nosso trabalho
-        </p>
-        <h2 className="text-3xl md:text-4xl font-black text-navy mb-4 leading-tight">
-          Websites criados pela Zarix
-        </h2>
-        <p className="text-gray-500 text-base md:text-lg mb-16 max-w-lg">
-          Cada projeto é construído para atrair clientes e mostrar o que o seu negócio faz melhor.
-        </p>
-
+    <section
+      id="trabalho"
+      style={{ background: '#F1EDE4', color: '#0D1B3E' }}
+    >
+      <div
+        className="max-w-[1200px] mx-auto"
+        style={{ padding: 'clamp(70px,9vh,118px) clamp(24px,4vw,56px)' }}
+      >
         <div
-          className="transition-opacity duration-400"
-          style={{ opacity: visible ? 1 : 0 }}
+          className="flex justify-between items-end flex-wrap gap-8"
+          style={{ marginBottom: 'clamp(40px,5vh,60px)' }}
         >
-          <div className="flex flex-col md:flex-row gap-8 md:gap-12 items-start md:items-end">
-            <div className="flex-1 min-w-0">
-              <DesktopMockup title={project.title} category={project.category} />
-            </div>
-            <div className="flex flex-col gap-6 md:gap-8 items-start">
-              <MobileMockup category={project.category} />
-              <div className="max-w-xs">
-                <p className="text-xs font-bold uppercase tracking-widest text-cyan mb-2">
-                  {project.category}
-                </p>
-                <h3 className="text-xl font-bold text-navy mb-2">{project.title}</h3>
-                <p className="text-gray-500 text-sm leading-relaxed">{project.description}</p>
-              </div>
-            </div>
-          </div>
+          <h2
+            className="font-heading m-0 max-w-[16ch]"
+            style={{
+              fontWeight: 900,
+              fontSize: 'clamp(1.9rem,3.8vw,3.1rem)',
+              lineHeight: 1.02,
+              letterSpacing: '-0.02em',
+              color: '#0D1B3E',
+              textWrap: 'balance' as React.CSSProperties['textWrap'],
+            }}
+          >
+            Trabalho recente.
+          </h2>
+          <a
+            href="/#contacto"
+            className="text-[0.95rem] font-semibold text-[#0D1B3E] no-underline inline-flex items-center gap-2 transition-colors hover:text-[#2E8FC9]"
+            style={{ borderBottom: '1px solid rgba(13,27,62,0.3)', paddingBottom: 2 }}
+          >
+            Quero um site assim <span className="font-heading">→</span>
+          </a>
         </div>
+      </div>
 
-        <div className="mt-16 flex items-center gap-3">
-          {projects.map((_, i) => (
-            <span
+      {/* Marquee viewport (full-bleed) */}
+      <div
+        style={{
+          overflow: 'hidden',
+          paddingBottom: 'clamp(70px,9vh,118px)',
+        }}
+      >
+        <div
+          ref={marqueeRef}
+          style={{
+            display: 'flex',
+            gap: 'clamp(20px,2.4vw,32px)',
+            width: 'max-content',
+            willChange: 'transform',
+            paddingLeft: 'clamp(24px,4vw,56px)',
+          }}
+        >
+          {allCards.map((p, i) => (
+            <div
               key={i}
-              className={`block h-0.5 transition-all duration-300 ${
-                i === current ? 'w-8 bg-navy' : 'w-4 bg-gray-300'
-              }`}
-            />
+              aria-hidden={i >= projects.length}
+              style={{
+                flex: 'none',
+                width: 'clamp(340px,48vw,580px)',
+                display: 'flex',
+                flexDirection: 'column',
+              }}
+            >
+              <div
+                style={{
+                  background: '#fff',
+                  border: '1px solid rgba(13,27,62,0.1)',
+                  overflow: 'hidden',
+                  aspectRatio: '1920/877',
+                }}
+              >
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src={p.img}
+                  alt={i < projects.length ? p.title : ''}
+                  style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'top', display: 'block' }}
+                />
+              </div>
+              <div className="flex justify-between items-baseline gap-4 mt-[18px]">
+                <h3
+                  className="font-heading m-0"
+                  style={{ fontWeight: 800, fontSize: '1.3rem', letterSpacing: '-0.01em', color: '#0D1B3E' }}
+                >
+                  {p.title}
+                </h3>
+                <span
+                  className="text-[0.82rem] font-semibold uppercase tracking-[0.04em] shrink-0"
+                  style={{ color: '#7A8295' }}
+                >
+                  {p.category}
+                </span>
+              </div>
+              <p className="text-[0.95rem] leading-[1.55] mt-2" style={{ color: '#565E6E' }}>
+                {p.description}
+              </p>
+            </div>
           ))}
         </div>
       </div>

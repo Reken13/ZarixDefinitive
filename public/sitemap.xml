@@ -1,91 +1,79 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
   <url>
     <loc>https://zarix.site/</loc>
-    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://zarix.site/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://zarix.site/"/>
+    <lastmod>2026-06-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
 
   <url>
     <loc>https://zarix.site/criacao-websites-aveiro</loc>
-    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://zarix.site/criacao-websites-aveiro"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://zarix.site/criacao-websites-aveiro"/>
+    <lastmod>2026-06-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <url>
     <loc>https://zarix.site/websites-para-restaurantes</loc>
-    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://zarix.site/websites-para-restaurantes"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://zarix.site/websites-para-restaurantes"/>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-
-  <url>
-    <loc>https://zarix.site/suporte-it-aveiro</loc>
-    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://zarix.site/suporte-it-aveiro"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://zarix.site/suporte-it-aveiro"/>
+    <lastmod>2026-06-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <url>
     <loc>https://zarix.site/suporte-it-restaurantes-aveiro</loc>
-    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://zarix.site/suporte-it-restaurantes-aveiro"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://zarix.site/suporte-it-restaurantes-aveiro"/>
+    <lastmod>2026-06-18</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://zarix.site/suporte-it-aveiro</loc>
+    <lastmod>2026-06-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
 
   <url>
     <loc>https://zarix.site/redes-wifi-empresas-aveiro</loc>
-    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://zarix.site/redes-wifi-empresas-aveiro"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://zarix.site/redes-wifi-empresas-aveiro"/>
+    <lastmod>2026-06-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
     <loc>https://zarix.site/ciberseguranca-pme</loc>
-    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://zarix.site/ciberseguranca-pme"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://zarix.site/ciberseguranca-pme"/>
+    <lastmod>2026-06-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
     <loc>https://zarix.site/chatbots-ia-whatsapp</loc>
-    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://zarix.site/chatbots-ia-whatsapp"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://zarix.site/chatbots-ia-whatsapp"/>
+    <lastmod>2026-06-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
     <loc>https://zarix.site/manutencao-informatica-aveiro</loc>
-    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://zarix.site/manutencao-informatica-aveiro"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://zarix.site/manutencao-informatica-aveiro"/>
+    <lastmod>2026-06-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
     <loc>https://zarix.site/blog</loc>
-    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://zarix.site/blog"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://zarix.site/blog"/>
+    <lastmod>2026-06-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
     <loc>https://zarix.site/blog-website-vs-instagram-restaurante</loc>
-    <xhtml:link rel="alternate" hreflang="pt-PT" href="https://zarix.site/blog-website-vs-instagram-restaurante"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://zarix.site/blog-website-vs-instagram-restaurante"/>
+    <lastmod>2026-05-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
