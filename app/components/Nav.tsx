@@ -15,7 +15,7 @@ export default function Nav() {
           onClick={() => setOpen(false)}
         >
           {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src="/zarix-z.png" alt="Zarix" className="w-7 h-7 block" />
+          <img src="/zarix-z.svg" alt="Zarix" className="w-7 h-7 block" />
           <span className="font-heading font-extrabold text-2xl tracking-[-0.02em]">
             Zari<span className="text-cyan">x</span>
           </span>
